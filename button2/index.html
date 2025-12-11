@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="center">
+        <button>
+            <p>Upload File</p>
+            <div class="loading"></div>
+            <div class="fa fa-check"></div>
+        </button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('button').parent().addClass('active')
+                setTimeout(function(){
+                    $('button').addClass('success')
+                }, 3400)
+                setTimeout(function(){
+                    alert("File has been uploaded successfully!")
+                    $('button').parent().removeClass('active')
+                    $('button').removeClass('success')
+                }, 4200)
+
+            })
+        })
+    </script>
+</body>
+</html>
