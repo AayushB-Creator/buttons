@@ -18,11 +18,11 @@ body{
 .button{
     position: relative;
     padding: 10px 22px;
-    background: #000;
+    background: #7d2ae8;
     border-radius: 6pt;
     color: white;
     border: none;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 400;
     cursor: pointer;
     transition: transform .2s ease;
@@ -38,10 +38,10 @@ body{
     transform: translate(-50%,0);
     height: 100%;
     width: 150%;
-    border: 2px solid red;
     background-repeat: no-repeat;
+    z-index: -1;
 }
-.button::before{
+.button.animate::before{
     top: -70%;
     background-image: radial-gradient(circle,#7d2ae8 20%, transparent 20.5%),radial-gradient(circle, transparent 20%,#7d2ae8 20.5%,transparent 26%),radial-gradient(circle,#7d2ae8 20%, transparent 20.5%),radial-gradient(circle, transparent 10%,#7d2ae8 15.5%,transparent 20%),
     radial-gradient(circle,#7d2ae8 20%, transparent 20.5%),
@@ -61,7 +61,7 @@ body{
         background-size: 0% 0%,0% 0%, 0% 0%,0% 0%,0% 0%, 0% 0%, 0% 0%, 0% 0% ;
     }
 }
-.button::after{
+.button.animate::after{
     bottom: -70%;
     left: -100%;
     rotate: 180deg;
