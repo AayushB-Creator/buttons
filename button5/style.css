@@ -32,4 +32,9 @@ body{
     background-color: #7d2ae8;
     border: 10px solid white;
     border-radius: 50%;
+    
+}
+.toggle.active::before{
+    left: calc(100% - 70px);
+    
 }
